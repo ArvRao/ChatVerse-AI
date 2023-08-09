@@ -1,11 +1,19 @@
 import Link from "next/link";
+import { Poppins } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const font = Poppins({
+    weight: "400",
+    subsets: ['latin']
+});
 
 const RootPage = () => {
     return ( 
         <div>
             <nav className="bg-gradient-to-r from-green-400 to-blue-300 flex items-center justify-between bg-gray-200 py-4 px-4 md:px-8">
                 <div className="flex items-center justify-center md:justify-start">
-                    <a href="/" className="text-4xl text-gray-600 font-light">ChatVerse AI</a>
+                    <a href="/" className={cn("hidden md:block text-4xl md:text-3xl font-light text-gray-600", 
+                        font.className)}>ChatVerse-AI</a>
                 </div>
                 <div className="flex items-center justify-end md:hidden">
                     <button className="text-gray-600 hover:text-gray-900">
@@ -27,9 +35,11 @@ const RootPage = () => {
             <div className="font-normal text-blue-300 text-3xl">Explore, learn and chat with popular AI characters</div> <br />
             <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" href='/home'>Get started</Link></center> <br />
             <br />
+            <div className="p-7">
 
             <div className="text-xl">We have a variety of categories of characters from celebrities to entrepreneurs</div>
             <div className="text-2xl">Create your own characters quickly</div>
+            </div>
         </div>
      );
 }
