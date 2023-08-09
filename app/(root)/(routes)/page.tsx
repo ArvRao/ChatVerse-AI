@@ -23,12 +23,13 @@ const RootPage = () => {
 
 
             <br />
-            <div className="font-normal text-blue-300 text-3xl">Explore, learn and chat with popular AI characters</div>
-            <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href='/home'>Get started</Link> <br />
+            <center>
+            <div className="font-normal text-blue-300 text-3xl">Explore, learn and chat with popular AI characters</div> <br />
+            <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" href='/home'>Get started</Link></center> <br />
             <br />
 
-            <div className="text-2xl">We have a variety of categories of characters from celebrities to entrepreneurs</div> <br />
-            <div className="text-3xl">Create your own characters quickly</div>
+            <div className="text-xl">We have a variety of categories of characters from celebrities to entrepreneurs</div>
+            <div className="text-2xl">Create your own characters quickly</div>
         </div>
      );
 }
