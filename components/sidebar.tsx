@@ -38,7 +38,7 @@ export const Sidebar = () => {
     return (
         <div className="space-y-4 flex flex-col h-full text-primary bg-secondary">
             <div className="p-3 flex flex-1 justify-center">
-                <div className="space-y-2">
+                <div className="space-y-5">
                     {routes.map((route) => (
                         <div 
                         onClick={() => onNavigate(route.href, route.pro)}
