@@ -23,7 +23,7 @@ const RootPage = () => {
                     </button>
                 </div>
                 <div className="hidden md:flex items-center justify-end">
-                    <a href="#" className="text-gray-700 hover:text-gray-900 mx-4">FAQs</a>
+                    <a href="/faqs" target="_blank" className="text-gray-700 hover:text-gray-900 mx-4">FAQs</a>
                     <a href="#" className="text-gray-700 hover:text-gray-900 mx-4">Privacy</a>
                     <a href="/contact" target="_blank" className="text-gray-700 hover:text-gray-900 mx-4">Contact</a>
                 </div>
