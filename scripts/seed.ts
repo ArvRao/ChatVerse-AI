@@ -9,10 +9,11 @@ async function main() {
         { name: 'Famous People' },
         { name: 'Movies & TV' },
         { name: 'Musicians' },
+        { name: 'Scientists' },
+        { name: 'Fiction characters' },
         { name: 'Games' },
         { name: 'Animals' },
         { name: 'Philosophy' },
-        { name: 'Scientists' },
       ],
     });
   } catch (error) {

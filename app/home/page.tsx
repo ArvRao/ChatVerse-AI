@@ -1,12 +1,17 @@
+import { Categories } from "@/components/categories";
 import SearchInput from "@/components/search-input";
+import prismadb from "@/lib/prismadb";
 
-const Home = () => {
+const Home = async () => {
+    const categories = await prismadb.category.findMany()
     return ( 
         <div className="pl-10 pt-2 text-4xl">
             Welcome to ChatVerse-AI homepage
             <div className="p-5 text-xl">
                 <SearchInput /> <br />
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eos non omnis animi ea veritatis deserunt excepturi. Accusantium molestias totam animi quaerat unde ea adipisci sequi nesciunt, beatae aut! Excepturi!
+                <Categories data={categories} />
+                <br />
+                Welcome to home page!
             </div>
         </div>
      );
