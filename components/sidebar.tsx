@@ -18,7 +18,7 @@ export const Sidebar = () => {
         },
         {
             icon: Plus,
-            href: "/chatverse/new",
+            href: "/chatVerseCharacter/new",
             label: "Create",
             pro: true,
         },
