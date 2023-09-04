@@ -4,8 +4,10 @@ import * as z from "zod";
 import { Category, ChatVerseCharacter } from "@prisma/client";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormField, FormItem, FormControl, FormMessage } from "@/components/ui/form";
+import { Form, FormField, FormItem, FormControl, FormMessage, FormLabel } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
+import { ImageUpload } from "@/components/image-upload";
+import { Input } from "@/components/ui/input";
 
 interface ChatverseIdPageProps {
     initialData: ChatVerseCharacter | null;
@@ -74,12 +76,33 @@ export const ChatverseForm = ({
                     render={({field}) => (
                         <FormItem className="flex flex-col items-center justify-center space-y-4">
                             <FormControl>
-                                Image Upload Component
+                                <ImageUpload
+                                 disabled={isLoading}
+                                 onChange={field.onChange}
+                                 value={field.value}                                 />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
                     )}
                     />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                        name="name"
+                        control={form.control}
+                        render={({ field }) => (
+                            <FormItem className="col-span-2 md:col-span-1">
+                                <FormLabel>Name</FormLabel>
+                                <FormControl>
+                                    <Input
+                                        disabled={isLoading}
+                                        placeholder="Elon Musk"
+                                        {...field}
+                                    />
+                                </FormControl>
+                            </FormItem>
+                        )}
+                        ></FormField>
+                    </div>
                 </form>
             </Form>
         </div>
