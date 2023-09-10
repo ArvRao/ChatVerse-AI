@@ -1,22 +1,27 @@
 import prismadb from "@/lib/prismadb";
 import { ChatverseForm } from "./components/chatverse-form";
+import { auth } from "@clerk/nextjs";
 
 interface ChatversecharacterPageProps {
     params: {
-        chatverseId: string
+        chatversecharacterId: string;
     };
 };
 
 const ChatVerseCharacterIdPage = async ({
     params
 }: ChatversecharacterPageProps) => {
+    const { userId } = auth();
+    console.log("chatverse:: ", params.chatversecharacterId);
     // Check subscription
+
     const chatverse = await prismadb.chatVerseCharacter.findUnique({
         where: {
-            id: "343ffc22-2588-4a59-b5b5-ce596d687647",
+            id: params.chatversecharacterId,
+            // userId,
         }
     });
-    console.log(chatverse)
+    console.log("chatverse: ",chatverse)
 
     const categories = await prismadb.category.findMany();
 

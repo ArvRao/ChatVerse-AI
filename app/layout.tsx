@@ -1,4 +1,5 @@
 import './globals.css'
+import { Toaster } from '@/components/ui/toaster'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
@@ -23,6 +24,7 @@ export default function RootLayout({
         <body className={cn("bg-secondary", inter.className)}>
           <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
             {children}
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>
