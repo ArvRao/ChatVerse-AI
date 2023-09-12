@@ -103,7 +103,8 @@ export const ChatverseForm = ({
             }
 
             toast({
-                description: "Success."
+                color: "green",
+                description: "Success!"
             });
             router.refresh();
             router.push('/home');

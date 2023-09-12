@@ -28,17 +28,16 @@ const Home = async ({
             }
         }
     });
-    console.log(data)
-      
       
     const categories = await prismadb.category.findMany()
+
     return ( 
         <div className="pl-10 pt-2 text-4xl">
             Welcome to ChatVerse-AI homepage
             <div className="p-5 text-xl">
                 <SearchInput /> <br />
                 <Categories data={categories} />
-                <Characters />
+                <Characters data={data}/>
                 <br />
                 Welcome to home page!
             </div>
