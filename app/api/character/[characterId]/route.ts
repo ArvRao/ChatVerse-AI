@@ -7,15 +7,15 @@ console.log("came here")
 
 export async function PATCH(
   req: Request,
-  { params }: { params: { companionId: string } }
+  { params }: { params: { characterId: string } }
 ) {
   try {
     const body = await req.json();
     const user = await currentUser();
     const { src, name, description, instructions, seed, categoryId } = body;
 
-    if (!params.companionId) {
-      return new NextResponse("Companion ID required", { status: 400 });
+    if (!params.characterId) {
+      return new NextResponse("Character ID required", { status: 400 });
     }
 
     if (!user || !user.id || !user.firstName) {
@@ -28,7 +28,7 @@ export async function PATCH(
 
     const companion = await prismadb.chatVerseCharacter.update({
       where: {
-        id: params.companionId,
+        id: params.characterId,
         userId: user.id,
       },
       data: {
@@ -52,7 +52,7 @@ export async function PATCH(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { companionId: string } }
+  { params }: { params: { characterId: string } }
 ) {
   try {
     const { userId } = auth();
@@ -64,7 +64,7 @@ export async function DELETE(
     const companion = await prismadb.chatVerseCharacter.delete({
       where: {
         userId,
-        id: params.companionId
+        id: params.characterId
       }
     });
 
