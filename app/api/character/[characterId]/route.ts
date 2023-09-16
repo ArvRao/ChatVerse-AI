@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 
 import prismadb from "@/lib/prismadb";
 
-console.log("came here")
 
 export async function PATCH(
   req: Request,
@@ -56,21 +55,21 @@ export async function DELETE(
 ) {
   try {
     const { userId } = auth();
-
+ 
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    const companion = await prismadb.chatVerseCharacter.delete({
+    const character = await prismadb.chatVerseCharacter.delete({
       where: {
         userId,
         id: params.characterId
       }
     });
 
-    return NextResponse.json(companion);
+    return NextResponse.json(character);
   } catch (error) {
-    console.log("[COMPANION_DELETE]", error);
+    console.log("[CHARACTER_DELETE]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
 };

@@ -28,6 +28,12 @@ export const Sidebar = () => {
             label: "Settings",
             pro: false,
         },
+        {
+            icon: Settings,
+            href: "/Analytics",
+            label: "Analytics",
+            pro: false,
+        },
     ]
 
     const onNavigate = (url: string, pro: boolean) => {

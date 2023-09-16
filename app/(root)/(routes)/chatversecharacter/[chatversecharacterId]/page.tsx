@@ -21,7 +21,6 @@ const ChatVerseCharacterIdPage = async ({
             // userId,
         }
     });
-    console.log("chatverse: ",chatverse)
 
     const categories = await prismadb.category.findMany();
 
