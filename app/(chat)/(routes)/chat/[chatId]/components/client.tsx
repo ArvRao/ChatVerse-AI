@@ -55,10 +55,11 @@ export const ChatClient = ({
         setMessages((current) => [...current, userMessage]);
 
         handleSubmit(e);
+        setInput("");
     }
 
     return (
-        <div className="flex flex-col h-full p-4 space-y-2">
+        <div className="flex-col h-full p-4 space-y-2">
             <ChatHeader character={character}/>
             <ChatMessages 
                 character={character}
