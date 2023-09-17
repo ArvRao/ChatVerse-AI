@@ -21,7 +21,7 @@ export const Navbar = () => {
             <div className="flex items-center">
                     {/* <Menu className="block md:hidden" /> */}
                     <MobileSidebar />
-                    <Link href="/">
+                    <Link href="/home">
                         <h1 className={cn("hidden md:block text-2xl md:text-3xl font-light text-primary", 
                         font.className)}>ChatVerse-AI</h1>
                     </Link>

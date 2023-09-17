@@ -24,7 +24,7 @@ export const Sidebar = () => {
         },
         {
             icon: FileText,
-            href: "/Analytics",
+            href: "/analytics",
             label: "Analytics",
             pro: false,
         },
