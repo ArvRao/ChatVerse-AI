@@ -1,6 +1,6 @@
 import prismadb from "@/lib/prismadb";
 import { ChatverseForm } from "./components/chatverse-form";
-import { auth } from "@clerk/nextjs";
+import { auth, redirectToSignIn } from "@clerk/nextjs";
 
 interface ChatversecharacterPageProps {
     params: {
@@ -12,13 +12,16 @@ const ChatVerseCharacterIdPage = async ({
     params
 }: ChatversecharacterPageProps) => {
     const { userId } = auth();
-    console.log("chatverse:: ", params.chatversecharacterId);
+
+    if (!userId) {
+        return redirectToSignIn();
+    }
     // Check subscription
 
     const chatverse = await prismadb.chatVerseCharacter.findUnique({
         where: {
             id: params.chatversecharacterId,
-            // userId,
+            userId,
         }
     });
 

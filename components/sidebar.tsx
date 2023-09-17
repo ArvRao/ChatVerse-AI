@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation"
-import { Home, Plus, Settings } from "lucide-react";
+import { Home, Plus, Settings, FileText, UserCircle2, Globe } from "lucide-react";
 
 
 export const Sidebar = () => {
@@ -12,7 +12,7 @@ export const Sidebar = () => {
     const routes = [
         {
             icon: Home,
-            href: "/",
+            href: "/home",
             label: "Home",
             pro: false,
         },
@@ -29,9 +29,21 @@ export const Sidebar = () => {
             pro: false,
         },
         {
-            icon: Settings,
+            icon: FileText,
             href: "/Analytics",
             label: "Analytics",
+            pro: false,
+        },
+        {
+            icon: Globe,
+            href: "/globe",
+            label: "Posts",
+            pro: false,
+        },
+        {
+            icon: UserCircle2,
+            href: "/account",
+            label: "Account",
             pro: false,
         },
     ]
