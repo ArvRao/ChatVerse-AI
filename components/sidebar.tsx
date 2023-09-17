@@ -23,12 +23,6 @@ export const Sidebar = () => {
             pro: true,
         },
         {
-            icon: Settings,
-            href: "/settings",
-            label: "Settings",
-            pro: false,
-        },
-        {
             icon: FileText,
             href: "/Analytics",
             label: "Analytics",
@@ -46,6 +40,12 @@ export const Sidebar = () => {
             label: "Account",
             pro: false,
         },
+        {
+            icon: Settings,
+            href: "/settings",
+            label: "Settings",
+            pro: false,
+        }
     ]
 
     const onNavigate = (url: string, pro: boolean) => {
