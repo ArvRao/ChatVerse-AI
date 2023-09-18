@@ -30,16 +30,16 @@ export const Sidebar = () => {
         },
         {
             icon: Globe,
-            href: "/globe",
+            href: "/posts",
             label: "Posts",
             pro: false,
         },
-        {
-            icon: UserCircle2,
-            href: "/account",
-            label: "Account",
-            pro: false,
-        },
+        // {
+        //     icon: UserCircle2,
+        //     href: "/account",
+        //     label: "Account",
+        //     pro: false,
+        // },
         {
             icon: Settings,
             href: "/settings",
