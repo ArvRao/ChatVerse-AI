@@ -41,7 +41,7 @@ const Analytics = async () => {
       </div>
 
       <div className="text-center text-xl">
-        Name: {user?.firstName} {user?.lastName} <br />
+        Name: <strong>{user?.firstName} {user?.lastName} </strong> <br />
         Total ChatVerse characters that you built: <strong>{characters.length}</strong>
       </div>
 
@@ -70,7 +70,7 @@ const Analytics = async () => {
 
         <div className="text-center text-md pt-5">Total ChatVerse characters present: <strong>{totalCharacters}</strong></div> <br />
 
-        <div>Most interacted chatVerseCharacter: <strong>{characterWithHighestMessageSize?.name} </strong> </div>
+        <div>The most interacted chatVerseCharacter: <strong>{characterWithHighestMessageSize?.name} </strong> </div>
       </center>
     </div>
   );

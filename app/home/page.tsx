@@ -33,13 +33,11 @@ const Home = async ({
 
     return ( 
         <div className="pl-10 pt-2 text-4xl">
-            Welcome to ChatVerse-AI homepage
             <div className="p-5 text-xl">
                 <SearchInput /> <br />
                 <Categories data={categories} />
                 <Characters data={data}/>
                 <br />
-                Welcome to home page!
             </div>
         </div>
      );

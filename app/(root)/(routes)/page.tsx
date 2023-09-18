@@ -37,10 +37,25 @@ const RootPage = () => {
             <br />
             <div className="flex pl-8">
                 <div className="w-3/5">
-                    <div className="text-2xl">Chat with any character about anything. <br /> We have a variety of categories of characters from celebrities to entrepreneurs</div> <br /> <br />
-                    <div className="text-lg">Create your own characters quickly</div>
-                    <div className="text-lg">A dedicated discussion community <br />
-                    Get LIVE analytics about your activity!</div>
+                <div className="container mx-auto py-8 text-center">
+      <h1 className="text-4xl font-bold mb-4">Chat with any character about anything</h1>
+      <p className="text-lg mb-4">Choose from a variety of categories of characters, including celebrities and entrepreneurs.</p>
+      
+      <div className="my-8">
+        <h2 className="text-2xl font-bold">Create your own characters quickly</h2>
+        <p className="text-lg">Customize your own characters and get started in no time.</p>
+      </div>
+
+      {/* <div className="my-8">
+        <h2 className="text-2xl font-bold">Join our dedicated discussion community</h2>
+        <p className="text-lg">Engage with others, share your thoughts, and explore a wide range of topics.</p>
+      </div> */}
+
+      <div className="my-8">
+        <h2 className="text-2xl font-bold">Get LIVE analytics about your activity!</h2>
+        <p className="text-lg">Stay informed with real-time analytics on your interactions and contributions.</p>
+      </div>
+    </div>
 
                 </div>
                 <div className="w-2/5">
