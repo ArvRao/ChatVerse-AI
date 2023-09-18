@@ -35,7 +35,7 @@ const RootPage = () => {
                 <div className="font-normal text-blue-300 text-3xl">Explore, learn and chat with popular AI characters</div> <br />
                 <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" href='/home'>Get started</Link></center> <br />
             <br />
-            <div className="flex">
+            <div className="flex pl-8">
                 <div className="w-3/5">
                     <div className="text-2xl">Chat with any character about anything. <br /> We have a variety of categories of characters from celebrities to entrepreneurs</div> <br /> <br />
                     <div className="text-lg">Create your own characters quickly</div>
