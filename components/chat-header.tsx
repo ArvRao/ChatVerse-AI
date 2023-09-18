@@ -55,7 +55,7 @@ export const ChatHeader = ({
     return (
     <div className="flex w-full justify-between items-center border-b border-primary/10 pb-4">
         <div className="flex gap-x-2 items-center">
-            <Button onClick={() => router.back()} size="icon" variant="ghost">
+            <Button className="fixed left-6 bg-gray-500 hover:bg-blue-600 text-white rounded-full" onClick={() => router.back()} size="icon" variant="ghost">
                 <ChevronLeft className="h-8 w-8" />
             </Button>
             <BotAvatar src={character.src} />

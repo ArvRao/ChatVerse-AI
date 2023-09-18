@@ -1,12 +1,11 @@
 import React from 'react'
-import { UserButton, UserProfile } from '@clerk/nextjs';
-import { User } from '@clerk/nextjs/server';
+import { UserProfile } from '@clerk/nextjs';
 
 function SettingsPage() {
   return (
-    <div className='container mx-auto mt-8 p-4'>
+    <center className='container mx-auto mt-5'>
         <UserProfile />
-    </div>
+    </center>
   )
 }
 

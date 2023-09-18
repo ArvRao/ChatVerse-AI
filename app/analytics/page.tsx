@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/navbar";
 import prismadb from "@/lib/prismadb";
-import { currentUser, useUser } from "@clerk/nextjs";
+import { Separator } from "@/components/ui/separator"
+import { currentUser } from "@clerk/nextjs";
 import { format } from "date-fns"; // Import the format function
 
 const Analytics = async () => {
@@ -64,8 +64,13 @@ const Analytics = async () => {
         ))}
 
         {characters.length == 0 ? "None" : ""} <br /> <br /> <br />
-        <div className="text-center text-md">Total ChatVerse characters present: {totalCharacters}</div> <br />
-        <div>Most interacted chatVerseCharacter: {characterWithHighestMessageSize?.name}</div>
+      
+      <Separator className="bg-primary/10" />
+
+
+        <div className="text-center text-md pt-5">Total ChatVerse characters present: <strong>{totalCharacters}</strong></div> <br />
+
+        <div>Most interacted chatVerseCharacter: <strong>{characterWithHighestMessageSize?.name} </strong> </div>
       </center>
     </div>
   );

@@ -21,7 +21,7 @@ export const ChatForm = ({
     isLoading
 }: ChatFormProps) => {
     return (
-        <div className="bottom-0 left-0 right-0 mx-auto max-w-md lg:max-w-xl">
+        <div className="fixed bottom-0 left-0 right-0 mx-auto max-w-md lg:max-w-xl">
         <form
          onSubmit={onSubmit} className="border-t border-primary/10 py-4 flex items-center gap-x-2">
             <Input 

@@ -28,12 +28,12 @@ export const Sidebar = () => {
             label: "Analytics",
             pro: false,
         },
-        {
-            icon: Globe,
-            href: "/posts",
-            label: "Posts",
-            pro: false,
-        },
+        // {
+        //     icon: Globe,
+        //     href: "/posts",
+        //     label: "Posts",
+        //     pro: false,
+        // },
         // {
         //     icon: UserCircle2,
         //     href: "/account",
