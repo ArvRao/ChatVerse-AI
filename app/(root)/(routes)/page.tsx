@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const font = Poppins({
     weight: "400",
@@ -8,11 +9,11 @@ const font = Poppins({
 });
 
 const RootPage = () => {
-    return ( 
+    return (
         <div>
             <nav className="bg-gradient-to-r from-green-400 to-blue-300 flex items-center justify-between bg-gray-200 py-4 px-4 md:px-8">
                 <div className="flex items-center justify-center md:justify-start">
-                    <a href="/" className={cn("hidden md:block text-4xl md:text-3xl font-light text-gray-600", 
+                    <a href="/" className={cn("hidden md:block text-4xl md:text-3xl font-light text-gray-600",
                         font.className)}>ChatVerse-AI</a>
                 </div>
                 <div className="flex items-center justify-end md:hidden">
@@ -29,19 +30,30 @@ const RootPage = () => {
                 </div>
             </nav>
 
-
             <br />
             <center>
-            <div className="font-normal text-blue-300 text-3xl">Explore, learn and chat with popular AI characters</div> <br />
-            <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" href='/home'>Get started</Link></center> <br />
+                <div className="font-normal text-blue-300 text-3xl">Explore, learn and chat with popular AI characters</div> <br />
+                <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" href='/home'>Get started</Link></center> <br />
             <br />
-            <div className="p-7">
+            <div className="flex">
+                <div className="w-3/5">
+                    <div className="text-2xl">Chat with any character about anything. <br /> We have a variety of categories of characters from celebrities to entrepreneurs</div> <br /> <br />
+                    <div className="text-lg">Create your own characters quickly</div>
+                    <div className="text-lg">A dedicated discussion community <br />
+                    Get LIVE analytics about your activity!</div>
 
-            <div className="text-xl">We have a variety of categories of characters from celebrities to entrepreneurs</div>
-            <div className="text-2xl">Create your own characters quickly</div>
+                </div>
+                <div className="w-2/5">
+                    <Image
+                        width={450}
+                        height={450}
+                        alt="Main picture"
+                        src="/main-image.png"
+                    />
+                </div>
             </div>
         </div>
-     );
+    );
 }
 
 export default RootPage;
